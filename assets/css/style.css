@@ -1,0 +1,294 @@
+/* General body styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'handwriting type', 'caveat';
+  margin: 0;
+  padding: 0;
+  background-color: #ffe8e8;
+  color: #b35e5e;
+}
+
+/* Header Styles */
+header {
+  background-color: #000000;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #b35e5e; /* Dark background color for the navbar */
+  padding: 10px 0; /* Add some padding for spacing */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 5px;
+}
+
+nav ul li a {
+  text-decoration: none; /* Corrected from 'solid' */
+  padding: 10px 40px;
+  color: #ffacac;
+  background-color: #ffa3a3;
+  border-radius: 20px;
+  font-weight: bold;
+  display: inline-block; /* Ensures proper alignment */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  font-size: 16px; /* Optional: Adjust font size for better readability */
+}
+
+nav ul li a:hover {
+  background-color: #c56060; /* Slightly darker background on hover */
+  color: #ffacac; /* Change text color to white on hover */
+}
+
+nav ul li a:focus {
+  outline: 3px solid #f38686; /* Adds an outline for keyboard navigation */
+}
+
+nav ul li a.active {
+  background-color: #d95353; /* Highlight active link */
+  color: white; /* Active link text color */
+}
+
+
+/* Main Content Styles */
+main {
+  text-align: left;
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(198, 111, 111, 0.872);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Section 1 - Introduction */
+.section1-header {
+  font-size: 40px;
+}
+
+.section1-text {
+  font-size: 30px;
+}
+
+/* Section 2 - Overview */
+.section2-header {
+  font-size: 40px;
+}
+
+.section2-subheader {
+  font-size: 30px;
+}
+
+.section2-text {
+  font-size: 25px;
+}
+
+/* Section 3 - Care and Training */
+.section3-header {
+  font-size: 40px;
+}
+
+.section3-subheader {
+  font-size: 30px;
+}
+
+.section3-text {
+  font-size: 25px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Section 4 - Future Research and Q&A */
+.section4-header {
+  font-size: 40px;
+}
+
+.section4-subheader {
+  font-size: 30px;
+}
+
+.section4-text {
+  font-size: 25px;
+}
+
+.qa-header {
+  font-size: 40px;
+}
+
+.qa-subheader {
+  font-size: 30px;
+}
+
+.qa-question {
+  font-size: 25px;
+}
+
+.answer-section .answer {
+  font-size: 25px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  /* Make font sizes smaller */
+  p {
+      font-size: 16px;
+  }
+
+  h1, h2, h3 {
+      font-size: 24px;
+  }
+
+  /* Stack the main sections vertically */
+  main {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  section {
+      width: 100%;
+      padding: 15px;
+  }
+
+  /* Adjust navigation items */
+  nav ul {
+      flex-direction: column;
+  }
+
+  nav ul li {
+      margin: 10px 0;
+  }
+}
+
+/* Make images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* Make the iframe responsive */
+.responsive-video {
+  width: 100%;   /* Make the video width 100% of its container */
+  height: auto;  /* Maintain the aspect ratio */
+  max-width: 560px; /* Set a max-width to prevent it from growing too large */
+}
+
+/* For smaller screens, adjust the iframe size */
+@media (max-width: 768px) {
+  .responsive-video {
+    max-width: 100%; /* Let the iframe take up 100% of the container width on smaller screens */
+    height: 315px; /* Maintain the same aspect ratio */
+  }
+}
+
+/* Basic styles for the form */
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.question-section {
+  max-width: 600px;
+  margin: 20px 0 20px 0; /* Aligns it to the left (margin-left: 0) */
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  resize: vertical; /* Allows the user to resize the textarea vertically */
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .question-section {
+    padding: 15px;
+    margin: 20px 0 20px 0; /* Align to the left on smaller screens */
+  }
+
+  textarea {
+    font-size: 0.9rem;
+  }
+
+  input[type="submit"] {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .question-section {
+    padding: 10px;
+    margin: 20px 0 20px 0; /* Keep the left alignment */
+  }
+
+  textarea {
+    font-size: 0.85rem;
+  }
+
+  input[type="submit"] {
+    font-size: 0.85rem;
+    padding: 7px 14px;
+  }
+}
